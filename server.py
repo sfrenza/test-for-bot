@@ -7,8 +7,8 @@ import json
 #import psycopg2
 from configparser import ConfigParser
 
-from flask import Flask
-from flask import request
+#from flask import Flask
+#from flask import request
 from flask import make_response
 from flask import render_template
 
@@ -28,7 +28,7 @@ def hello_world():
 
 @app.route('/doschatbot')
 def doschatbot():
-    return render_template('templates/page.html')
+    return render_template('page.html')
 
 @app.route('/doschatbot2')
 def doschatbot2():

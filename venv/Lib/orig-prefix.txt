@@ -1,1 +1,3 @@
+c:\users\vidal.anguiano\Python Projects
+c:\users\shaun.frenza\appdata\local\continuum\anaconda3
 c:\users\vidal.anguiano\appdata\local\continuum\anaconda2
