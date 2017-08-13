@@ -4,7 +4,7 @@ import warnings
 import os
 from flask import Flask, request
 import json
-import psycopg2
+#import psycopg2
 from configparser import ConfigParser
 
 from flask import Flask
@@ -12,12 +12,12 @@ from flask import request
 from flask import make_response
 from flask import render_template
 
-import chatbot
-import messenger
+#import chatbot
+#import messenger
 
 app = Flask(__name__)
 
-PAT = 'EAACVleRe26oBAJverSWgEZB1PKZAwcmBZAJwfowPNoaXWdkL8hS7Dc31VEQ5DeZAMUKxC3V9GFgLpgFZABm3XtCWUAZCqbzsZBQ4WR9itFs9mw2B37XID9Na4k2bcjjFtaCIRR2ZAgWUmkDRMyPIUnWi3dM4thsNpMUphtzOSIRGNQZDZD'
+#PAT = 'EAACVleRe26oBAJverSWgEZB1PKZAwcmBZAJwfowPNoaXWdkL8hS7Dc31VEQ5DeZAMUKxC3V9GFgLpgFZABm3XtCWUAZCqbzsZBQ4WR9itFs9mw2B37XID9Na4k2bcjjFtaCIRR2ZAgWUmkDRMyPIUnWi3dM4thsNpMUphtzOSIRGNQZDZD'
 bot = None
 
 
@@ -48,12 +48,12 @@ def doschatbotariba():
 
 @app.route('/webhook', methods=['GET'])
 def handle_verification():
-  print "Handling Verification."
+  print("Handling Verification.")
   if request.args.get('hub.verify_token', '') == 'hola-mundo':
-    print "Verification successful!"
+    print("Verification successful!")
     return request.args.get('hub.challenge', '')
   else:
-    print "Verification failed!"
+    print("Verification failed!")
     return 'Error, wrong validation token'
 
 
@@ -62,7 +62,7 @@ def webhook():
     req = request.get_json(silent=True, force=True)
     # connect()
     intent = req["result"]["metadata"]["intentName"]
-    print intent
+    print(intent)
 
     print("Request:")
     print(json.dumps(req))
