@@ -28,7 +28,7 @@ def hello_world():
 
 @app.route('/doschatbot')
 def doschatbot():
-    return render_template('page.html')
+    return render_template('templates/page.html')
 
 @app.route('/doschatbot2')
 def doschatbot2():
